@@ -12,25 +12,45 @@
 
     <div class="search-bar d-flex align-items-center w-50%">
         <input type="search" id="search-bar" class="search-input" placeholder="Enter Profile Name">
-        <button class="bg-body-secondary p-1"><i class="fa-solid fa-magnifying-glass" style="color: #7303b0;"></i></button>
+        <button onclick="fetchUserData()" class="search-btn bg-body-secondary p-1"><i class="fa-solid fa-magnifying-glass" style="color: #7303b0;"></i></button>
     </div>
     
 
     <div class="card-profile">
         <div class="profile">
-            <div class="pro-pic" id="pro-pic"></div>
+            <div class="pro-pic" id="pro-pic">
+                <img class="img" id="avatar" src="images/user-removebg-preview.png" alt="">
+            </div>
             <div class="username text-light ">
-                <h3>no record found</h3>
-                <p class="username-id">username</p>
+                <h3 id="full-name">no record found</h3>
+                <!-- <p class="username-id" id="user-name">username</p> -->
                 <p class="bio" id="bio">bio here</p>
              </div>            
 
         </div>
-        <div class="stats">
-            <span class="spans followers" id="followers"> <p>0</p> <p>Followers</p></span>
-            <span class="spans following" id="following"><p>0</p><p>Following</p></span>
-            <span class="spans respos" id="respos"><p>0</p><p>Respositories</p></span>
+        <div class="stats m-4">
+            <span class="spans followers" > 
+                <h3 id="followers">0</h3> <p>Followers</p>
+            </span>
+            <span class="spans following" >
+                <h3 id="following">0</h3><p>Following</p>
+            </span>
+            <span class="spans respos" >
+                <h3 id="repos">0</h3><p>Respositories</p>
+            </span>
         </div>
+        <div class="work">
+            <h5 class="d-flex mx-3">Works at <p class="work" id="work">  </p></h5>
+        </div>
+
+        <div class="view-github d-grid gap-2">
+            <button onclick="goToProfile()" class="btn btn-primary"><i class="fa-brands fa-github"></i> View on Github</button>
+        </div>
+
+        <div class="create-date d-flex">
+            <p class="create-on" id="create-on">Located at </p>
+        </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="app.js"></script>
